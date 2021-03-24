@@ -1,0 +1,12 @@
+<div class="ms_main_wrapper">
+
+    <app-menu-section></app-menu-section>
+
+    <perfect-scrollbar class="main-ps vh-100" (psScrollY)="psBodyScroll($event)" #perfectScroll>
+
+      <router-outlet></router-outlet>
+
+    </perfect-scrollbar>
+
+    <app-player></app-player>
+</div>
