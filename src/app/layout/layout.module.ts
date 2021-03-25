@@ -2,6 +2,8 @@ import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface} from 'ngx-per
 import {NgModule} from '@angular/core';
 import { MenuSectionComponent } from './menu-section/menu-section.component';
 import { PlayerComponent } from './player/player.component';
+import { BannerComponent } from './banner/banner.component';
+import { FooterComponent } from './footer/footer.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -10,10 +12,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
   declarations: [
     MenuSectionComponent,
-    PlayerComponent
+    PlayerComponent,
+    BannerComponent,
+    FooterComponent
   ],
   exports: [
-    MenuSectionComponent
+    MenuSectionComponent,
+    PlayerComponent,
+    BannerComponent,
+    FooterComponent
   ],
   imports: [
   ],
