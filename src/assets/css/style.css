@@ -2689,7 +2689,7 @@ button.jp-shuffle .ms_play_control:hover {
 	color: #dedede;
 	margin-bottom: 5px;
 }
-.album_btn a.ms_btn {
+.album_btn button.ms_btn {
 	height: 40px;
 	line-height: 42px;
 	width: auto;
@@ -2710,7 +2710,7 @@ span.pause_all {
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
 }
-.album_btn a.ms_btn img {
+.album_btn button.ms_btn img {
 	margin-right: 10px;
 	vertical-align: middle;
 	position: relative;
@@ -2985,7 +2985,7 @@ ul.play_active_song .play_hover {
 	text-align: center;
 	margin-top: 55px;
 }
-.ms_view_more a.ms_btn {
+.ms_view_more button.ms_btn {
 	height: 40px;
 	line-height: 45px;
 	padding: 0px 46px;
@@ -3237,8 +3237,8 @@ i.fa_icon.form-envelope {
 i.fa_icon.form-lock {
 	background-position: -80px -40px;
 }
-.ms_register_form a.ms_btn,
-.ms_lang_btn a.ms_btn {
+.ms_register_form button.ms_btn,
+.ms_lang_btn button.ms_btn {
 	background-color: transparent;
 	height: 40px;
 	border: 1px solid #fff;
@@ -3248,8 +3248,8 @@ i.fa_icon.form-lock {
 	width: auto;
 	margin-top: 10px;
 }
-.ms_register_form a.ms_btn:hover,
-.ms_lang_popup .modal-content.add_lang .ms_lang_btn a.ms_btn:hover {
+.ms_register_form button.ms_btn:hover,
+.ms_lang_popup .modal-content.add_lang .ms_lang_btn button.ms_btn:hover {
 	background-color: #ffffff;
 	color: #22bed7;
 }
@@ -3813,7 +3813,7 @@ ul.pro_dropdown_menu li a:hover {
 	-ms-transition: all 0.7s ease-in-out;
 	-o-transition: all 0.7s ease-in-out;
 }
-.ms_plan_box a.ms_btn {
+.ms_plan_box button.ms_btn {
 	height: 40px;
 	line-height: 40px;
 	width: 150px;
@@ -3880,7 +3880,7 @@ ul.pro_dropdown_menu li a:hover {
 	width: 30%;
 	color: #3bc8e7;
 }
-.ms_acc_ovrview_list a.ms_btn {
+.ms_acc_ovrview_list button.ms_btn {
 	margin-left: 0px;
 	height: 40px;
 	line-height: 42px;
@@ -3910,7 +3910,7 @@ ul.pro_dropdown_menu li a:hover {
 	margin: 40px 0px 50px;
 	cursor: pointer;
 }
-.ms_upload_btn a.ms_btn {
+.ms_upload_btn button.ms_btn {
 	margin-left: 0px;
 	height: 40px;
 	line-height: 43px;
@@ -4057,11 +4057,11 @@ ul.pro_dropdown_menu li a:hover {
 	text-align: center;
 	margin-top: 20px;
 }
-.ms_lang_btn a.ms_btn {
+.ms_lang_btn button.ms_btn {
 	cursor: default;
 	opacity: 0.2;
 }
-.ms_lang_popup .modal-content.add_lang .ms_lang_btn a.ms_btn {
+.ms_lang_popup .modal-content.add_lang .ms_lang_btn button.ms_btn {
 	opacity: 1;
 	cursor: pointer;
 }
@@ -4878,7 +4878,7 @@ h2.widget-title:after {
 	.album_single_text {
 		padding-top: 0;
 	}
-	a.ms_btn.play_btn {
+	button.ms_btn.play_btn {
 		width: 130px;
 		padding: 0px;
 		font-size: 14px;
@@ -5295,7 +5295,7 @@ h2.widget-title:after {
 	.album_single_data {
 		width: 100%;
 	}
-	.album_btn a.ms_btn {
+	.album_btn button.ms_btn {
 		height: 40px;
 		line-height: 45px;
 		padding: 0px 25px;
@@ -5331,7 +5331,7 @@ h2.widget-title:after {
 	.ms_input_group2 {
 		width: 100%;
 	}
-	.album_btn a.ms_btn {
+	.album_btn button.ms_btn {
 		height: 40px;
 		line-height: 45px;
 		padding: 0px 20px;
@@ -5695,7 +5695,7 @@ h2.widget-title:after {
 	.ms_pro_form .form-group {
 		width: 100%;
 	}
-	.ms_upload_btn a.ms_btn {
+	.ms_upload_btn button.ms_btn {
 		margin-bottom: 15px;
 	}
 	.modal-dialog {
@@ -6050,7 +6050,7 @@ h2.widget-title:after {
 	.album_list_wrapper>ul>li {
 		width: 15%;
 	}
-	.ms_main_wrapper.ms_profile a.ms_btn {
+	.ms_main_wrapper.ms_profile button.ms_btn {
 		width: auto;
 		padding: 0px 15px;
 	}
@@ -6135,7 +6135,7 @@ h2.widget-title:after {
 	.ms_upload_box {
 		padding: 50px 20px;
 	}
-	.ms_upload_btn a.ms_btn {
+	.ms_upload_btn button.ms_btn {
 		margin: 10px 0px;
 	}
 	.ms_blog_single_wrapper {
@@ -6228,7 +6228,7 @@ h2.widget-title:after {
 	.ms_heading h1 {
 		width: 100%;
 	}
-	.album_btn a.ms_btn {
+	.album_btn button.ms_btn {
 		width: 100%;
 		margin-right: 0px;
 		margin-bottom: 10px;
@@ -6442,7 +6442,7 @@ h2.widget-title:after {
 		margin: 30px 0px;
 		width: 50px;
 	}
-	.ms_upload_btn a.ms_btn {
+	.ms_upload_btn button.ms_btn {
 		height: 35px;
 		line-height: 38px;
 		width: auto;
@@ -6503,7 +6503,7 @@ h2.widget-title:after {
 	}
 }
 @media(max-width:320px) {
-	.album_btn a.ms_btn {
+	.album_btn button.ms_btn {
 		padding: 0px 5px;
 		font-size: 12px;
 		margin-bottom: 10px;
@@ -6580,7 +6580,7 @@ h2.widget-title:after {
 	.ms_plan_box ul {
 		padding: 0px 10px;
 	}
-	.ms_plan_box a.ms_btn {
+	.ms_plan_box button.ms_btn {
 		width: 115px;
 	}
 	.ms_acc_ovrview_list ul li {

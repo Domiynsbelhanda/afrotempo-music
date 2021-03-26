@@ -4,6 +4,9 @@ import { MenuSectionComponent } from './menu-section/menu-section.component';
 import { PlayerComponent } from './player/player.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -14,15 +17,19 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MenuSectionComponent,
     PlayerComponent,
     BannerComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   exports: [
     MenuSectionComponent,
     PlayerComponent,
     BannerComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    CommonModule
   ],
   entryComponents: [],
   providers: [

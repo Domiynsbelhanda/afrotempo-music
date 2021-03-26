@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-banner',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  currentUser: any;
+  connected: boolean = true;
+
+  constructor(private localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
+    this.currentUser = this.localStorage.getCurrentUser();
+  }
+
+  logOut(): void{
+    this.localStorage.setLocalStorage('currentUser', null);
+    location.reload();
   }
 
 }
