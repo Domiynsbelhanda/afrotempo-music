@@ -16,7 +16,7 @@
 
     <div class="ms_top_right" *ngIf="currentUser != null">
         <div class="ms_top_btn">
-            <a href="upload.html" class="ms_btn">upload</a>
+            <a routerLinkActive="active" routerLink="upload" class="ms_btn">upload</a>
             <a href="javascript:;" class="ms_admin_name">{{ currentUser.displayName }}													
             </a>
             <ul class="pro_dropdown_menu">

@@ -1,0 +1,68 @@
+<div class="ms_upload_wrapper marger_top60">
+    <div class="ms_upload_box">
+        <h2>Upload & Share Your Music With The World</h2>
+        <img src="../../../../assets/images/svg/upload.svg" alt="">
+
+        <div class="ms_pro_form">
+            <label for="songFile" class="col-md-4 text-md-right col-form-label">Song</label>
+            <input type="file" (change)="uploadSong($event)" class="form-control" id="songFile" name="songFile" accept=".mp3,audio/*" ngModel required>
+            <div class="container"></div>
+            <div class="ms_pro_form">
+              <div class="progress" *ngIf="uploadProgress_song$">
+                <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': (uploadProgress_song$ | async) + '%' }">{{ (uploadProgress_song$ | async) }} %</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="ms_pro_form">
+            <label for="songImage" class="col-md-4 text-md-right col-form-label">Cover</label>
+            <input type="file" (change)="uploadImage($event)" class="form-control" id="songImage" name="songImage" accept="image/x-png,image/gif,image/jpeg" ngModel required>
+            <div class="container"></div>
+            
+            <div class="ms_pro_form">
+              <div class="progress" *ngIf="uploadProgress_image$">
+                <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': (uploadProgress_image$ | async) + '%' }">{{(uploadProgress_image$ | async)}} %</div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+    <div class=" marger_top60">
+        <div class="ms_upload_box">
+            <div class="ms_heading">
+                <h1>Track Information</h1>
+            </div>
+            <div class="ms_pro_form">
+                
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <div class="form-group">
+                        <label>Track Name</label>
+                        <input type="text" id="songName" name="songName" class="form-control" ngModel required>
+                    </div>
+                    <div class="form-group">
+                        <label>Artist’s Name</label>
+                        <input type="text" id="artistName" name="artistName" class="form-control" ngModel required>
+                    </div>
+                    <div class="form-group">
+                        <label>Composer's Name</label>
+                        <input type="text" id="composerName" name="composerName" class="form-control" ngModel required>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Genre</label>
+                        <select class="form-control" id="genres" name="genres" ngModel required>
+                            <option class="active" value="{{genres[0].nom}}">{{genres[0].nom}} </option>
+                            <option value="{{genres[1].nom}}">{{genres[1].nom}} </option>
+                        </select>
+                    </div>
+                    <div class="pro-form-btn text-center marger_top15">
+                        <div class="ms_upload_btn" *ngIf="(uploadProgress_song$ | async) == 100" >
+                            <button type="submit" class="ms_btn" [disabled]="f.invalid">Upload Now</button>
+                            <a href="javascript:;"  (click)="goHome()" class="ms_btn">cancle</a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

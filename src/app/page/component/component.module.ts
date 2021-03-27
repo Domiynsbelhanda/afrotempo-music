@@ -6,6 +6,7 @@ import {HomeComponent} from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UploadComponent } from './upload/upload.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'profil',
         component: ProfilComponent
+      },
+      {
+        path: 'upload',
+        component: UploadComponent
       }
     ]
   }
@@ -31,7 +36,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    ProfilComponent
+    ProfilComponent,
+    UploadComponent
   ],
   imports: [
     CommonModule,
