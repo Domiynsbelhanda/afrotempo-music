@@ -28,10 +28,9 @@
         </div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-
-                <app-primary-card *ngFor="let song of songs" [song]="song"></app-primary-card>
-
-                
+                <div class="swiper-slide" *ngFor="let song of songs">
+                    <app-primary-card  [song]="song"></app-primary-card>
+                </div>
             </div>
         </div>
         <!-- Add Arrows -->

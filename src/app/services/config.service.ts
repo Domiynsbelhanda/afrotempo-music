@@ -23,7 +23,7 @@ export class ConfigService {
 
     this.songs = [
       {
-        cover_url: 'https://lushitrap.com/assets/artists/Nyandoro/audio/Agressivo%20-%20ZAINA_lushitrapMUSIC.jpg',
+        cover_url: '../../../assets/images/music/zaina.jpg',
         name: 'Zaina',
         composer: 'Dj Chris',
         artist: 'Agressivo Nyandoro',
@@ -37,11 +37,67 @@ export class ConfigService {
       },
 
       {
-        cover_url: 'https://storage.googleapis.com/assets-pam-blog/2020/10/2e2cae73-dj_p2n.jpg',
-        name: 'Mobutu x Pson',
-        composer: 'DJ P2N',
-        artist: 'DJ P2N',
-        downloads: 0,
+        cover_url: '../../../assets/images/music/sabu.jpeg',
+        name: 'Sabu',
+        composer: 'P Son',
+        artist: 'P Son',
+        downloads: 4,
+        genre: 'Urbain',
+        id: '9yoixB0kVPdCxO9C45fH',
+        lyrics: 'No Lyrics',
+        timestamp: 'No time',
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
+      },
+
+      {
+        cover_url: '../../../assets/images/music/veranda.jpg',
+        name: 'Veranda x Boyoma',
+        composer: 'P2N',
+        artist: 'P2N',
+        downloads: 9,
+        genre: 'Urbain',
+        id: '9yoixB0kVPdCxO9C45fH',
+        lyrics: 'No Lyrics',
+        timestamp: 'No time',
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
+      },
+
+      {
+        cover_url: '../../../assets/images/music/abomi_nga.jpg',
+        name: 'Abomi Nga feat Ferre Gola',
+        composer: 'Majoos',
+        artist: 'Majoos',
+        downloads: 23,
+        genre: 'Urbain',
+        id: '9yoixB0kVPdCxO9C45fH',
+        lyrics: 'No Lyrics',
+        timestamp: 'No time',
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
+      },
+
+      {
+        cover_url: '../../../assets/images/music/kamalondo.jpg',
+        name: 'Kamalondo',
+        composer: 'Lhomanix Kyanzila',
+        artist: 'Lhomanix Kyanzila',
+        downloads: 15,
+        genre: 'Urbain',
+        id: '9yoixB0kVPdCxO9C45fH',
+        lyrics: 'No Lyrics',
+        timestamp: 'No time',
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
+      },
+
+      {
+        cover_url: '../../../assets/images/music/radio.jpg',
+        name: 'Radio',
+        composer: 'Tienness Naija',
+        artist: 'Tienness Naija',
+        downloads: 98,
         genre: 'Urbain',
         id: '9yoixB0kVPdCxO9C45fH',
         lyrics: 'No Lyrics',
