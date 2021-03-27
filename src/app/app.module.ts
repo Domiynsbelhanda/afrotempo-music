@@ -11,6 +11,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
+import { PrimaryCardComponentComponent } from './partials/primary-card-component/primary-card-component.component';
 
 @NgModule({
   declarations: [

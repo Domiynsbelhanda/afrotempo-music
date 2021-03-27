@@ -7,6 +7,8 @@ import { ProfilComponent } from './profil/profil.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { UploadComponent } from './upload/upload.component';
+import { PartialsModule } from 'src/app/partials/partial.module';
+import { LayoutModule } from 'src/app/layout/layout.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -42,6 +44,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    PartialsModule,
+    LayoutModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule
   ],

@@ -10,6 +10,7 @@ import {PageRoutingModule} from './page-routing.module';
 import {PageComponent} from './page.component';
 import {ComponentModule} from './component/component.module';
 import {LayoutModule} from '../layout/layout.module';
+import { PartialsModule } from '../partials/partial.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -26,7 +27,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RouterModule,
     PageRoutingModule,
     ComponentModule,
-    LayoutModule
+    LayoutModule,
+    PartialsModule,
   ],
   providers: [
     {
