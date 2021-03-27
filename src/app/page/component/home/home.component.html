@@ -27,9 +27,9 @@
             <span class="veiw_all"><a href="#">view more</a></span>
         </div>
         <div class="swiper-container">
-            <div class="swiper-wrapper" *ngFor="let song of songs">
+            <div class="swiper-wrapper">
 
-                <app-primary-card [song]="song"></app-primary-card>
+                <app-primary-card *ngFor="let song of songs" [song]="song"></app-primary-card>
 
                 
             </div>
