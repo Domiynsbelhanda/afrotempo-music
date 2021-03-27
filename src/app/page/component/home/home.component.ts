@@ -8,9 +8,12 @@ export class HomeComponent implements OnInit {
 
   songs: any;
 
+  artists: any;
+
   constructor(private config: ConfigService) {}
 
   ngOnInit(): void {
     this.songs = this.config.songs
+    this.artists = this.config.artists
   }
 }
