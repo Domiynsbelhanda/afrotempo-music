@@ -13,77 +13,16 @@
           </div>
       </div>
       <div class="ms_nav_wrapper">
-          <ul>
-            <li><a href="{{config.items[0].page}}" class="active" [title]="config.items[0].title">
+          <ul *ngFor="let item of config.items">
+            <li><a [title]="item.title" routerLink="{{item.page}}">
               <span class="nav_icon">
-                <span [class]="config.items[0].icon"></span>
+                <span [class]="item.icon"></span>
               </span>
               <span class="nav_text">
-                {{config.items[0].title}}
+                {{item.title}}
               </span>
               </a>
             </li>
-
-            <li><a href="{{config.items[1].page}}" [title]="config.items[1].title">
-              <span class="nav_icon">
-                <span [class]="config.items[1].icon"></span>
-              </span>
-              <span class="nav_text">
-                {{config.items[1].title}}
-              </span>
-              </a>
-            </li>
-
-            <li><a href="{{config.items[2].page}}" [title]="config.items[2].title">
-              <span class="nav_icon">
-                <span [class]="config.items[2].icon"></span>
-              </span>
-              <span class="nav_text">
-                {{config.items[2].title}}
-              </span>
-              </a>
-            </li>
-
-            <li><a href="{{config.items[3].page}}" [title]="config.items[3].title">
-              <span class="nav_icon">
-                <span [class]="config.items[3].icon"></span>
-              </span>
-              <span class="nav_text">
-                {{config.items[3].title}}
-              </span>
-              </a>
-            </li>
-
-            <li><a href="{{config.items[4].page}}" [title]="config.items[4].title">
-              <span class="nav_icon">
-                <span [class]="config.items[4].icon"></span>
-              </span>
-              <span class="nav_text">
-                {{config.items[4].title}}
-              </span>
-              </a>
-            </li>
-
-            <li><a href="{{config.items[5].page}}" [title]="config.items[5].title">
-              <span class="nav_icon">
-                <span [class]="config.items[5].icon"></span>
-              </span>
-              <span class="nav_text">
-                {{config.items[5].title}}
-              </span>
-              </a>
-            </li>
-
-            <li><a href="{{config.items[6].page}}" [title]="config.items[6].title">
-              <span class="nav_icon">
-                <span [class]="config.items[6].icon"></span>
-              </span>
-              <span class="nav_text">
-                {{config.items[6].title}}
-              </span>
-              </a>
-            </li>
-                          
           </ul>
       </div>
   </div>

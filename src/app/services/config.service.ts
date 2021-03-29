@@ -11,16 +11,34 @@ export class ConfigService {
 
   artists: any;
 
+  albums: any;
+
   constructor() {
     this.genre = [
       {
-        nom: 'Rumba',
-        image: 'https://www.mediacongo.net/cache/rumba-congolaise_jpg_640_350_1.jpeg'
+        nom: 'Urbain',
+        image: '../../../assets/images/genrs/urbain.jpg'
       },
       {
-        nom: 'RAP',
-        image: 'https://image.shutterstock.com/image-vector/vector-logo-rap-music-hand-600w-1365427319.jpg'
-      }    
+        nom: 'Rumba',
+        image: '../../../assets/images/genrs/rumba.jpeg'
+      },
+      {
+        nom: 'Rap',
+        image: '../../../assets/images/genrs/rap.webp'
+      },
+      {
+        nom: 'Gospel',
+        image: '../../../assets/images/genrs/gospel.jpg'
+      },
+      {
+        nom: 'Trap',
+        image: '../../../assets/images/genrs/trap.jpg'
+      },
+      {
+        nom: 'Autres',
+        image: '../../../assets/images/genrs/autres.jpg'
+      }   
     ];
 
     this.songs = [
@@ -186,6 +204,62 @@ export class ConfigService {
         photoURL: "../../../assets/images/artist/tienness.jpg",
         telephone: "+243 996 852 377",
         uid: "tienness"
+      }
+    ];
+
+    this.albums = [
+      {
+        name: "QQJD",
+        artist: "Ferre Gola",
+        uid: "uid fere",
+        id: "qqjd",
+        nbre_chanson: 20,
+        cover_url: "../../../assets/images/album/qqjd.jpg"
+      },
+
+      {
+        name: "YA SASA",
+        artist: "Agressivo Nyandoro",
+        uid: "uid",
+        id: "yasasa",
+        nbre_chanson: 10,
+        cover_url: "../../../assets/images/album/ya_sasa.jfif"
+      },
+
+      {
+        name: "MILS 3.0",
+        artist: "Ninho",
+        uid: "uid",
+        id: "mils3",
+        nbre_chanson: 11,
+        cover_url: "../../../assets/images/album/mils.png"
+      },
+
+      {
+        name: "EVOLUTION OF CONGO",
+        artist: "DJ P2N Gorilla",
+        uid: "uid",
+        id: "evolution",
+        nbre_chanson: 12,
+        cover_url: "../../../assets/images/album/evolution_of_congo.jpg"
+      },
+
+      {
+        name: "Power",
+        artist: "Oxygène Bleduza",
+        uid: "uid",
+        id: "power",
+        nbre_chanson: 7,
+        cover_url: "../../../assets/images/album/power.jpg"
+      },
+
+      {
+        name: "Tokooos 2",
+        artist: "Fally Ipupa",
+        uid: "uid",
+        id: "tokooos2",
+        nbre_chanson: 10,
+        cover_url: "../../../assets/images/album/tokooos2.jpg"
       }
     ]
   }

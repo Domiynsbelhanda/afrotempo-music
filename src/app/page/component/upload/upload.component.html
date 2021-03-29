@@ -50,8 +50,7 @@
                     <div class="form-group">
                         <label>Select Genre</label>
                         <select class="form-control" id="genres" name="genres" ngModel required>
-                            <option class="active" value="{{genres[0].nom}}">{{genres[0].nom}} </option>
-                            <option value="{{genres[1].nom}}">{{genres[1].nom}} </option>
+                            <option *ngFor="let genre of genres" value="{{genre.nom}}">{{genre.nom}} </option>
                         </select>
                     </div>
                     <div class="pro-form-btn text-center marger_top15">

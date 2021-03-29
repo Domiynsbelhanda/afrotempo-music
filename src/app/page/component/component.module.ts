@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { UploadComponent } from './upload/upload.component';
 import { PartialsModule } from 'src/app/partials/partial.module';
 import { LayoutModule } from 'src/app/layout/layout.module';
+import { TracksComponent } from './tracks/tracks.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -30,6 +31,10 @@ const routes: Routes = [
       {
         path: 'upload',
         component: UploadComponent
+      },
+      {
+        path: 'track',
+        component: TracksComponent
       }
     ]
   }
@@ -39,7 +44,8 @@ const routes: Routes = [
   declarations: [
     HomeComponent,
     ProfilComponent,
-    UploadComponent
+    UploadComponent,
+    TracksComponent
   ],
   imports: [
     CommonModule,
