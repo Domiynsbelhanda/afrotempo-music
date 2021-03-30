@@ -33,7 +33,7 @@ export class TracksDetailsComponent implements OnInit {
     this.songs = this.config.songs
 
     for(let element in this.songs){
-      if(this.songId === this.songs[element].uid){
+      if(this.songId === this.songs[element].id){
         this.details = this.songs[element]
       }
     }

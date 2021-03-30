@@ -53,7 +53,7 @@ export class ConfigService {
         lyrics: 'No Lyrics',
         timestamp: 'No time',
         uid: "IZCkAL0oCQce9OdHGTX69UVOCFm7",
-        link:"/track/IZCkAL0oCQce9OdHGTX69UVOCFm7/details",
+        link:"/track/9yoixB0kVPdCxO9CZ6fH/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -64,11 +64,11 @@ export class ConfigService {
         artist: 'P Son',
         downloads: 4,
         genre: 'Trap',
-        id: '9yoixB0kVPdCxO9C45fH',
+        id: '9yoixB0kVPdCxO9C45fH1',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
         uid: "IZCkAL0oCQce93HGTX69UVOCFm6",
-        link:"/track/IZCkAL0oCQce93HGTX69UVOCFm6/details",
+        link:"/track/9yoixB0kVPdCxO9C45fH1/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -79,11 +79,11 @@ export class ConfigService {
         artist: 'P2N',
         downloads: 9,
         genre: 'Gospel',
-        id: '9yoixB0kVPdCxO9C45fH',
+        id: '9yoixB0kVPdCxO9C45fH2',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
         uid: "IZCkAL0oCQce93HGTX69UVOCFm5",
-        link:"/track/IZCkAL0oCQce93HGTX69UVOCFm5/details",
+        link:"/track/9yoixB0kVPdCxO9C45fH2/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -94,11 +94,11 @@ export class ConfigService {
         artist: 'Majoos',
         downloads: 23,
         genre: 'Urbain',
-        id: '9yoixB0kVPdCxO9C45fH',
+        id: '9yoixB0kVPdCxO9C45fH3',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
         uid: "IZCkAL0oCQce93HGTX69UVOCFm4",
-        link:"/track/IZCkAL0oCQce93HGTX69UVOCFm4/details",
+        link:"/track/9yoixB0kVPdCxO9C45fH3/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -109,11 +109,11 @@ export class ConfigService {
         artist: 'Lhomanix Kyanzila',
         downloads: 15,
         genre: 'Rumba',
-        id: '9yoixB0kVPdCxO9C45fH',
+        id: '9yoixB0kVPdCxO9C45fH4',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
         uid: "IZCkAL0oCQce93HGTX69UVOCFm3",
-        link: "/track/IZCkAL0oCQce93HGTX69UVOCFm3/details",
+        link: "/track/9yoixB0kVPdCxO9C45fH4/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -124,11 +124,11 @@ export class ConfigService {
         artist: 'Tienness Naija',
         downloads: 98,
         genre: 'Rap',
-        id: '9yoixB0kVPdCxO9C45fH',
+        id: '9yoixB0kVPdCxO9C45fH5',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
         uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
-        link: "/track/IZCkAL0oCQce93HGTX69UVOCFm2/details",
+        link: "/track/9yoixB0kVPdCxO9C45fH5/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       }
     ];

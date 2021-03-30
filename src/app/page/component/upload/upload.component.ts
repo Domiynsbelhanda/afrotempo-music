@@ -57,6 +57,7 @@ export class UploadComponent implements OnInit {
       downloads: 0,
       lyrics: "No Lyrics",
       timestamp: new Date(),
+      link: 'artistes/'+this.id+'details'
     };
 
     this.afs.collection('chanson').doc(this.id).set(data, {merge: true}).then(res=>{
