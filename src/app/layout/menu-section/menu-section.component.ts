@@ -30,11 +30,6 @@ export class MenuSectionComponent implements OnInit {
         page: '/artistes'
       },
       {
-        title: 'Genres',
-        icon: 'icon icon_genres',
-        page: '/genres'
-      },
-      {
         title: 'Tracks',
         icon: 'icon icon_music',
         page: '/track'
