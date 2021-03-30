@@ -11,6 +11,7 @@ import { PartialsModule } from 'src/app/partials/partial.module';
 import { LayoutModule } from 'src/app/layout/layout.module';
 import { TracksComponent } from './tracks/tracks.component';
 import { ArtistsComponent } from './artists/artists.component';
+import { ArtistsDetailsComponent } from './artists/artists-details/artists-details.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -40,6 +41,10 @@ const routes: Routes = [
       {
         path: 'artistes',
         component: ArtistsComponent
+      },
+      {
+        path: 'artistes/:id/details',
+        component: ArtistsDetailsComponent
       }
     ]
   }
@@ -51,7 +56,8 @@ const routes: Routes = [
     ProfilComponent,
     UploadComponent,
     TracksComponent,
-    ArtistsComponent
+    ArtistsComponent,
+    ArtistsDetailsComponent
   ],
   imports: [
     CommonModule,

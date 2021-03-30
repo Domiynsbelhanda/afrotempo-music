@@ -138,7 +138,8 @@ export class ConfigService {
         name: "Agressivo Nyandoro",
         photoURL: "../../../assets/images/artist/nyandoro.jpg",
         telephone: "+243 996 852 377",
-        uid: "nyandoro"
+        uid: "nyandoro",
+        link: "/artistes/nyandoro/details"
       },
 
       {
@@ -151,7 +152,8 @@ export class ConfigService {
         name: "P Son Zuba Boy",
         photoURL: "../../../assets/images/artist/pson.jpg",
         telephone: "+243 996 852 377",
-        uid: "zubaboy"
+        uid: "zubaboy",
+        link: "/artistes/zubaboy/details"
       },
 
       {
@@ -164,7 +166,8 @@ export class ConfigService {
         name: "Lhomanix Kyanzila",
         photoURL: "../../../assets/images/artist/kyanzila.jpg",
         telephone: "+243 996 852 377",
-        uid: "kyanzila"
+        uid: "kyanzila",
+        link: "/artistes/kyanzila/details"
       },
 
       {
@@ -177,7 +180,8 @@ export class ConfigService {
         name: "Majoos",
         photoURL: "../../../assets/images/artist/majoos.jpg",
         telephone: "+243 996 852 377",
-        uid: "majoos"
+        uid: "majoos",
+        link: "/artistes/majoos/details"
       },
 
       {
@@ -190,7 +194,8 @@ export class ConfigService {
         name: "DJ P2N Gorilla",
         photoURL: "../../../assets/images/artist/p2n.jpg",
         telephone: "+243 996 852 377",
-        uid: "p2n"
+        uid: "p2n",
+        link: "/artistes/p2n/details"
       },
 
       {
@@ -203,7 +208,8 @@ export class ConfigService {
         name: "Tienness Naija",
         photoURL: "../../../assets/images/artist/tienness.jpg",
         telephone: "+243 996 852 377",
-        uid: "tienness"
+        uid: "tienness",
+        link: "/artistes/tienness/details"
       }
     ];
 
