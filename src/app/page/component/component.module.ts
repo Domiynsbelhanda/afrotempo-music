@@ -12,6 +12,7 @@ import { LayoutModule } from 'src/app/layout/layout.module';
 import { TracksComponent } from './tracks/tracks.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { ArtistsDetailsComponent } from './artists/artists-details/artists-details.component';
+import { TracksDetailsComponent } from './tracks/tracks-details/tracks-details.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -39,6 +40,10 @@ const routes: Routes = [
         component: TracksComponent
       },
       {
+        path: 'track/:id/details',
+        component: TracksDetailsComponent
+      },
+      {
         path: 'artistes',
         component: ArtistsComponent
       },
@@ -57,7 +62,8 @@ const routes: Routes = [
     UploadComponent,
     TracksComponent,
     ArtistsComponent,
-    ArtistsDetailsComponent
+    ArtistsDetailsComponent,
+    TracksDetailsComponent
   ],
   imports: [
     CommonModule,

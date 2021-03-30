@@ -52,7 +52,8 @@ export class ConfigService {
         id: '9yoixB0kVPdCxO9CZ6fH',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
-        uid: "IZCkAL0oCQce9OdHGTX69UVOCFm2",
+        uid: "IZCkAL0oCQce9OdHGTX69UVOCFm7",
+        link:"/track/IZCkAL0oCQce9OdHGTX69UVOCFm7/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -66,7 +67,8 @@ export class ConfigService {
         id: '9yoixB0kVPdCxO9C45fH',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
-        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm6",
+        link:"/track/IZCkAL0oCQce93HGTX69UVOCFm6/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -80,7 +82,8 @@ export class ConfigService {
         id: '9yoixB0kVPdCxO9C45fH',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
-        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm5",
+        link:"/track/IZCkAL0oCQce93HGTX69UVOCFm5/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -94,7 +97,8 @@ export class ConfigService {
         id: '9yoixB0kVPdCxO9C45fH',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
-        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm4",
+        link:"/track/IZCkAL0oCQce93HGTX69UVOCFm4/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -108,7 +112,8 @@ export class ConfigService {
         id: '9yoixB0kVPdCxO9C45fH',
         lyrics: 'No Lyrics',
         timestamp: 'No time',
-        uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        uid: "IZCkAL0oCQce93HGTX69UVOCFm3",
+        link: "/track/IZCkAL0oCQce93HGTX69UVOCFm3/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       },
 
@@ -123,6 +128,7 @@ export class ConfigService {
         lyrics: 'No Lyrics',
         timestamp: 'No time',
         uid: "IZCkAL0oCQce93HGTX69UVOCFm2",
+        link: "/track/IZCkAL0oCQce93HGTX69UVOCFm2/details",
         url: 'https://firebasestorage.googleapis.com/v0/b/afrotempo-cd55b.appspot.com/o/song%2F9yoixB0kVPdCxO9CZ6fH?alt=media&token=db7973f3-d139-42d4-b435-c6b347646833'
       }
     ];

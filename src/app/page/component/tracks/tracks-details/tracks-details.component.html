@@ -1,0 +1,17 @@
+<div class="album_single_data">
+    <div class="album_single_img">
+        <img [src]="details.cover_url" alt="" class="img-fluid" style="width: 240px; height: 240px ;object-fit: cover;">
+    </div>
+    <div class="album_single_text">
+        <h2>{{details.name}}</h2>
+        <p class="singer_name">{{details.artist}}</p>
+        <div class="about_artist">
+            Downloads : {{details.downloads}} <br>
+            Publish : {{details.timestamp.seconds * 1000 | date:'dd-MM-yyyy h:mm:ss'}}<br>
+            Composer : {{details.composer}} <br>
+            Genre : {{details.genre}} <br>
+        </div>
+        <a  (click)="addDownload(details.id, details.downloads, details.vue, details.url)" class="ms_btn">Download</a>
+        <a class="ms_btn">Shared</a>
+    </div>
+</div>
