@@ -43,6 +43,7 @@ export class ConfigService {
 
     this.songs = [
       {
+        album: "evolution",
         cover_url: '../../../assets/images/music/zaina.jpg',
         name: 'Zaina',
         composer: 'Dj Chris',
@@ -226,7 +227,8 @@ export class ConfigService {
         uid: "uid fere",
         id: "qqjd",
         nbre_chanson: 20,
-        cover_url: "../../../assets/images/album/qqjd.jpg"
+        cover_url: "../../../assets/images/album/qqjd.jpg",
+        link : "qqjd"
       },
 
       {
@@ -235,7 +237,8 @@ export class ConfigService {
         uid: "uid",
         id: "yasasa",
         nbre_chanson: 10,
-        cover_url: "../../../assets/images/album/ya_sasa.jfif"
+        cover_url: "../../../assets/images/album/ya_sasa.jfif",
+        link: "yasasa"
       },
 
       {
@@ -244,7 +247,8 @@ export class ConfigService {
         uid: "uid",
         id: "mils3",
         nbre_chanson: 11,
-        cover_url: "../../../assets/images/album/mils.png"
+        cover_url: "../../../assets/images/album/mils.png",
+        link: "mils3"
       },
 
       {
@@ -253,7 +257,8 @@ export class ConfigService {
         uid: "uid",
         id: "evolution",
         nbre_chanson: 12,
-        cover_url: "../../../assets/images/album/evolution_of_congo.jpg"
+        cover_url: "../../../assets/images/album/evolution_of_congo.jpg",
+        link: "evolution"
       },
 
       {
@@ -262,7 +267,8 @@ export class ConfigService {
         uid: "uid",
         id: "power",
         nbre_chanson: 7,
-        cover_url: "../../../assets/images/album/power.jpg"
+        cover_url: "../../../assets/images/album/power.jpg",
+        link: "power"
       },
 
       {
@@ -271,7 +277,8 @@ export class ConfigService {
         uid: "uid",
         id: "tokooos2",
         nbre_chanson: 10,
-        cover_url: "../../../assets/images/album/tokooos2.jpg"
+        cover_url: "../../../assets/images/album/tokooos2.jpg",
+        link: "tokooos2"
       }
     ]
   }

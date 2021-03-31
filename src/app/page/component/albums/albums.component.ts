@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-albums',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumsComponent implements OnInit {
 
-  constructor() { }
+  albums: any;
+
+  constructor(private config: ConfigService) { }
 
   ngOnInit(): void {
+    this.albums = this.config.albums
   }
 
 }

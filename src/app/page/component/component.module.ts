@@ -16,6 +16,7 @@ import { TracksDetailsComponent } from './tracks/tracks-details/tracks-details.c
 import { GenreComponent } from './genre/genre.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { AlbumsComponent } from './albums/albums.component';
+import { AlbumDetailComponent } from './albums/album-detail/album-detail.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -61,6 +62,10 @@ const routes: Routes = [
       {
         path: 'albums',
         component: AlbumsComponent
+      },
+      {
+        path: 'albums/:id',
+        component: AlbumDetailComponent
       }
     ]
   }
@@ -76,7 +81,8 @@ const routes: Routes = [
     ArtistsDetailsComponent,
     TracksDetailsComponent,
     GenreComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    AlbumDetailComponent
   ],
   imports: [
     IvyCarouselModule,
