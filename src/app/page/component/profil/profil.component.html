@@ -2,7 +2,7 @@
     <h1>Edit Profile</h1>
     <div class="ms_profile_box">
         <div class="ms_pro_img">
-            <img [src]="currentUser.photoURL" alt="" class="img-fluid">
+            <img [src]="currentUser.cover_url" alt="" class="img-fluid"  style="object-fit: cover">
             <div class="pro_img_overlay">
                 <label for="artisteImage" class="btn btn-primary" style="height: 50%; width: 50%"><i class="fa_icon edit_icon"></i></label>
                 <input type="file" (change)="uploadImage($event)"

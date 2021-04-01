@@ -22,7 +22,7 @@
                 <li class="text-center">More</li>
             </ul>
             <ul *ngFor="let song of songs; let index = index">
-                <li><a ><span class="play_no">{{index + 1}}</span><span class="play_hover"></span></a></li>
+                <li><a routerLink="{{song.link}}" ><span class="play_no">{{index + 1}}</span><span class="play_hover"></span></a></li>
                 <li><a >{{song.name}}</a></li>
                 <li class="text-center"><a >{{song.downloads}}</a></li>
                 <li class="text-center"><a >{{song.genre}}</a></li>

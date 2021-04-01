@@ -35,7 +35,7 @@ export class AuthentificationService {
               photoURL: 'https://www.materialui.co/materialIcons/action/account_circle_black_192x192.png',
               localisation: localisation,
               description: description,
-              link: 'artistes/'+users.user.uid+'details'
+              link: '/artistes/'+users.user.uid+'details'
             };
             this.afs.doc('users/' + users.user.uid).set(data, {merge: true}).then(res => {
               location.reload();

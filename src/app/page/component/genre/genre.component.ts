@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
@@ -19,6 +20,7 @@ export class GenreComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private config: ConfigService,
+    private afs: AngularFirestore,
   ) {
     this.routeSubscription = this.route.params.subscribe(param => {
       if (param.id) {
@@ -28,13 +30,12 @@ export class GenreComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.songss = this.config.songs
 
-    for(let elements in this.songss){
-        if(this.genreId === this.songss[elements].genre){
-          this.songs.push(this.songss[elements])
-        }
-    }
+    this.afs.collection<any>('chanson', ref=>ref
+      .where('genre', '==', this.genreId))
+      .valueChanges().subscribe((data)=>{
+        this.songs = data
+    });
   }
 
 }

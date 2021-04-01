@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -9,11 +10,25 @@ import { ConfigService } from 'src/app/services/config.service';
 export class TracksComponent implements OnInit {
 
   songs: any;
+  songss: any;
 
-  constructor(private config: ConfigService) { }
+  constructor(
+    private config: ConfigService,
+    private afs: AngularFirestore,
+    ) { }
 
   ngOnInit(): void {
-    this.songs = this.config.songs
+    this.afs.collection<any>('chanson', ref=>ref
+      .orderBy('timestamp', 'desc'))
+      .valueChanges().subscribe((data)=>{
+        this.songs = data.slice(0,6)
+    });
+
+    this.afs.collection<any>('chanson', ref=>ref
+      .orderBy('downloads', 'desc'))
+      .valueChanges().subscribe((data)=>{
+        this.songss = data.slice(0,15)
+    });
   }
 
 }

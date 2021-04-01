@@ -31,13 +31,12 @@ export class TracksDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.songs = this.config.songs
 
-    for(let element in this.songs){
-      if(this.songId === this.songs[element].id){
-        this.details = this.songs[element]
-      }
-    }
+    this.afs.collection<any>('chanson').doc(this.songId)
+      .valueChanges().subscribe((data)=>{
+        this.details = data
+    });
+
   }
 
   addDownload(noms: string, downloads: number, vue: number, lin: string) {

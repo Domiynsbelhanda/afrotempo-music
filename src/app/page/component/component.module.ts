@@ -17,6 +17,8 @@ import { GenreComponent } from './genre/genre.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDetailComponent } from './albums/album-detail/album-detail.component';
+import { EmissionComponent } from './emission/emission.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -66,6 +68,10 @@ const routes: Routes = [
       {
         path: 'albums/:id',
         component: AlbumDetailComponent
+      },
+      {
+        path: 'emission',
+        component: EmissionComponent
       }
     ]
   }
@@ -82,10 +88,12 @@ const routes: Routes = [
     TracksDetailsComponent,
     GenreComponent,
     AlbumsComponent,
-    AlbumDetailComponent
+    AlbumDetailComponent,
+    EmissionComponent
   ],
   imports: [
     IvyCarouselModule,
+    YouTubePlayerModule,
     CommonModule,
     FormsModule,
     PartialsModule,

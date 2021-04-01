@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
@@ -18,6 +19,7 @@ export class ArtistsDetailsComponent implements OnInit, OnDestroy {
   songs: any;
   
   constructor(
+    private afs: AngularFirestore,
     private route: ActivatedRoute,
     private config: ConfigService
   ) { 
@@ -29,14 +31,17 @@ export class ArtistsDetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.art = this.config.artists
-    this.songs = this.config.songs
 
-    for(let element in this.art){
-      if(this.artistId === this.art[element].uid){
-        this.details = this.art[element]
-      }
-    }
+    this.afs.collection<any>('users').doc(this.artistId)
+      .valueChanges().subscribe((data)=>{
+        this.details = data
+    });
+
+    this.afs.collection<any>('chanson', ref=>ref
+      .where('uid', '==', this.artistId))
+      .valueChanges().subscribe((data)=>{
+        this.songs = data
+    });
   }
 
   ngOnDestroy() {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -10,10 +11,17 @@ export class ArtistsComponent implements OnInit {
 
   artists: any;
 
-  constructor(private config: ConfigService) { }
+  constructor(
+    private config: ConfigService,
+    private afs: AngularFirestore,
+  ) { }
 
   ngOnInit(): void {
-    this.artists = this.config.artists
+    this.afs.collection<any>('users', ref=>ref
+      .orderBy('name', 'asc'))
+      .valueChanges().subscribe((data)=>{
+        this.artists = data
+    });
   }
 
 }
