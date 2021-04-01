@@ -42,7 +42,8 @@
               "src/assets/js/plugins/player/volume.js",
               "src/assets/js/plugins/nice_select/jquery.nice-select.min.js",
               "src/assets/js/plugins/scroll/jquery.mCustomScrollbar.js",
-              "src/assets/js/custom.js" ]
+              "src/assets/js/custom.js"
+             ]
           },
           "configurations": {
             "production": {
@@ -62,8 +63,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",

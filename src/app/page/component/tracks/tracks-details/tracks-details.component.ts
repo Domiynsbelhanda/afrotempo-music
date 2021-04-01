@@ -3,7 +3,6 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
-import * as $ from 'jquery'
 
 @Component({
   selector: 'app-tracks-details',
@@ -58,9 +57,6 @@ export class TracksDetailsComponent implements OnInit {
 
   play()
   {
-    $(function() {
-      "use strict";
-    });
   }
 
 }

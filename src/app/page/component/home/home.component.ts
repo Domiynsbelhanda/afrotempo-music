@@ -23,13 +23,13 @@ export class HomeComponent implements OnInit {
 
   genres: any;
 
-  images: any = [];
+  images: any;
 
   public innerWidth: any;
 
   items: Observable<any>;
 
-  emission: any;
+  emissions: string;
 
   constructor(
       private config: ConfigService,
@@ -79,7 +79,7 @@ export class HomeComponent implements OnInit {
     this.afs.collection<any>('emission', ref=>ref
       .orderBy('timestamp', 'desc'))
       .valueChanges().subscribe((data)=>{
-        this.emission = data.slice(0, 1)
+        this.emissions = data[0].link
     });
   }
 }

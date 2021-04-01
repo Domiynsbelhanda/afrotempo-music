@@ -4,6 +4,7 @@ Project: Miraculous - Online Music Store Html Template
 Version: 1.0.0
 Assigned to: Theme Forest
 -------------------------------------------------------------------*/
+
 (function($) {
     "use strict";
     var music = {

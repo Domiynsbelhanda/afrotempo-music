@@ -8,7 +8,7 @@
                 </div>
                 <ul class="more_option" *ngIf="song.artist">
                     <li (click)="addDownload(song.id, song.downloads, song.vue, song.url)"><a><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
-                    <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                    <li><a (click)="copier('afrotempo')"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
                 </ul>
                 <div class="ms_play_icon">
                     <img src="../../../assets/images/svg/play.svg" alt="">

@@ -19,6 +19,7 @@ import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDetailComponent } from './albums/album-detail/album-detail.component';
 import { EmissionComponent } from './emission/emission.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { ClipboardModule } from 'ngx-clipboard';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -93,6 +94,7 @@ const routes: Routes = [
   ],
   imports: [
     IvyCarouselModule,
+    ClipboardModule,
     YouTubePlayerModule,
     CommonModule,
     FormsModule,

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ClipboardService } from 'ngx-clipboard'
 
 @Component({
   selector: 'app-primary-card',
@@ -12,6 +13,7 @@ export class PrimaryCardComponentComponent implements OnInit {
 
   constructor(
     private afs: AngularFirestore,
+    private _clipboardService: ClipboardService
   ) { }
 
   ngOnInit(): void {
@@ -32,6 +34,11 @@ export class PrimaryCardComponentComponent implements OnInit {
     document.body.appendChild(link);
     link.click();
     link.remove();
+  }
+
+  copier(url: string){
+    this._clipboardService.copy(url)
+    alert("Url copier avec succes")
   }
 
 }
