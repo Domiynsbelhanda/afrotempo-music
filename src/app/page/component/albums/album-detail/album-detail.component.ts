@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ConfigService } from 'src/app/services/config.service';
@@ -19,7 +20,8 @@ export class AlbumDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private config: ConfigService
+    private config: ConfigService,
+    private afs: AngularFirestore,
   ) {
     this.routeSubscription = this.route.params.subscribe(param => {
       if (param.id) {
@@ -29,20 +31,35 @@ export class AlbumDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.songs = this.config.songs
-    this.albums = this.config.albums
+    
+    this.afs.collection<any>('chanson', ref=>ref
+      .where('album', '==', this.albumId))
+      .valueChanges().subscribe((data)=>{
+        this.details = data
+        console.log(data.length)
+    });
 
-    for(let elements in this.albums){
-      if(this.albumId == this.albums[elements].id){
-        this.det.push(this.albums[elements])
-      }
-    }
+    this.afs.collection<any>('album').doc(this.albumId)
+      .valueChanges().subscribe((data)=>{
+        this.det = data
+    });
+  }
 
-    for(let element in this.songs){
-      if(this.albumId === this.songs[element].album){
-        this.details.push(this.songs[element])
-      }
-    }
+  addDownload(noms: string, downloads: number, vue: number, lin: string) {
+
+    const download = {
+      downloads: downloads + 1,
+      vue: vue + 2,
+    };
+    this.afs.collection('chanson').doc(noms).set(download, {merge: true});
+
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', lin);
+    link.setAttribute('download', `products.csv`);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   }
 
 }

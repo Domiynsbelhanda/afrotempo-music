@@ -20,6 +20,11 @@ export class MenuSectionComponent implements OnInit {
         page: '/home'
       },
       {
+        title: 'Profil',
+        icon: 'icon icon_data',
+        page: '/profil'
+      },
+      {
         title: 'Albums',
         icon: 'icon icon_albums',
         page: '/albums'
@@ -34,6 +39,11 @@ export class MenuSectionComponent implements OnInit {
         icon: 'icon icon_music',
         page: '/track'
       },
+      {
+        title: 'Emission',
+        icon : 'icon icon_folder',
+        page: '/emission'
+      }
     ]
   };
 

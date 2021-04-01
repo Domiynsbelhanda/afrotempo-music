@@ -29,7 +29,7 @@
                 <li class="text-center"><a >{{song.timestamp.seconds * 1000 | date:'dd-MM-yyyy h:mm:ss'}}</a></li>
                 <li class="text-center ms_more_icon"><a href="javascript:;"><span class="ms_icon1 ms_active_icon"></span></a>
                     <ul class="more_option">
-                        <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
+                        <li><a (click)="addDownload(details.id, details.downloads, details.vue, details.url)"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
                         <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
                     </ul>
                 </li>

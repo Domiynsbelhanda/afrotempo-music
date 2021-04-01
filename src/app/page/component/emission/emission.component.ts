@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-emission',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmissionComponent implements OnInit {
 
-  constructor() { }
+  emission: any;
+
+  constructor(
+    private afs: AngularFirestore,
+  ) { }
 
   ngOnInit(): void {
+
+    this.afs.collection<any>('emission', ref=>ref
+      .orderBy('timestamp', 'desc'))
+      .valueChanges().subscribe((data)=>{
+        this.emission = data
+    });
   }
 
 }

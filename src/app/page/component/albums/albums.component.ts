@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
@@ -10,10 +11,16 @@ export class AlbumsComponent implements OnInit {
 
   albums: any;
 
-  constructor(private config: ConfigService) { }
+  constructor(
+    private afs: AngularFirestore,
+    private config: ConfigService) { }
 
   ngOnInit(): void {
-    this.albums = this.config.albums
+    this.afs.collection<any>('album', ref=>ref
+      .orderBy('timestamp', 'desc'))
+      .valueChanges().subscribe((data)=>{
+        this.albums = data
+    });
   }
 
 }

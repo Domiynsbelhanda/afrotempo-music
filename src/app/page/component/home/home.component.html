@@ -3,14 +3,13 @@
     <div class="ms-banner">
         <div class="container-fluid">
                     <carousel
-                        [width]="1000"
+                        [width]="innerWidth - 200"
                         [height]="innerWidth / 3"
                         [cellsToShow]="1"
                         [cellsToScroll]="1"
                         [autoplay]="true"
                         [autoplayInterval]="5000"
                         [pauseOnHover]="true"
-                        [loop]="true"
                         [counter]="true"
                         [counterSeparator]="' / '"
                         [images]="images">
@@ -74,7 +73,7 @@
     <div class="ms_fea_album_slider">
         <div class="ms_heading">
             <h1>Featured Albums</h1>
-            <span class="veiw_all"><a routerLink="/track">view more</a></span>
+            <span class="veiw_all"><a routerLink="/albums">view more</a></span>
         </div>
         <div class="ms_album_slider swiper-container">
             <div class="swiper-wrapper">
@@ -87,6 +86,26 @@
         <div class="swiper-button-next3 slider_nav_next"></div>
         <div class="swiper-button-prev3 slider_nav_prev"></div>
     </div>
+
+    <div class="ms_fea_album_slider">
+        <div class="ms_heading">
+            <h1>Afro Emission</h1>
+            <span class="veiw_all"><a routerLink="/emission">view more</a></span>
+        </div>
+        <div class="ms_album_slider swiper-container">
+
+
+                    <youtube-player 
+                        [videoId]="emission[0].link" 
+                        suggestedQuality="highres" 
+                        [height]="innerWidth / 3" 
+                        [width]="innerWidth - 200" >
+                    </youtube-player>
+
+
+        </div>
+    </div>
+
     <!----Top Genres Section Start---->
     <div class="ms_genres_wrapper">
         <div class="row">

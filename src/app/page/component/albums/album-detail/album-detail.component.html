@@ -1,12 +1,12 @@
 <div class="album_single_data">
     <div class="album_single_img">
-        <img [src]="det[0].cover_url" alt="" class="img-fluid" style="width: 240px; height: 240px ;object-fit: cover;">
+        <img [src]="det.cover_url" alt="" class="img-fluid" style="width: 240px; height: 240px ;object-fit: cover;">
     </div>
     <div class="album_single_text">
-        <h2>{{det[0].name}}</h2>
-        <p class="singer_name">{{det[0].artist}}</p>
+        <h2>{{det.name}}</h2>
+        <p class="singer_name">{{det.artist}}</p>
         <div class="about_artist">
-            {{det[0].nbre_chanson}}
+            {{det.nbre_chanson}}
         </div>
     </div>
 </div>
@@ -22,14 +22,14 @@
             <li class="text-center">More</li>
         </ul>
         <ul *ngFor="let song of details; let index = index">
-            <li><a ><span class="play_no">{{index + 1}}</span><span class="play_hover"></span></a></li>
-            <li><a >{{song.name}}</a></li>
+            <li><a routerLink="{{song.link}}"><span class="play_no">{{index + 1}}</span><span class="play_hover"></span></a></li>
+            <li><a routerLink="{{song.link}}">{{song.name}}</a></li>
             <li class="text-center"><a >{{song.downloads}}</a></li>
             <li class="text-center"><a >{{song.genre}}</a></li>
             <li class="text-center"><a >{{song.timestamp.seconds * 1000 | date:'dd-MM-yyyy h:mm:ss'}}</a></li>
             <li class="text-center ms_more_icon"><a href="javascript:;"><span class="ms_icon1 ms_active_icon"></span></a>
                 <ul class="more_option">
-                    <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
+                    <li><a (click)="addDownload(details.id, details.downloads, details.vue, details.url)"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
                     <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
                 </ul>
             </li>

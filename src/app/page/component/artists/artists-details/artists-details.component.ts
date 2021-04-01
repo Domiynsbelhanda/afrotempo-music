@@ -46,6 +46,23 @@ export class ArtistsDetailsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.routeSubscription.unsubscribe();
-}
+  }
+
+  addDownload(noms: string, downloads: number, vue: number, lin: string) {
+
+    const download = {
+      downloads: downloads + 1,
+      vue: vue + 2,
+    };
+    this.afs.collection('chanson').doc(noms).set(download, {merge: true});
+
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', lin);
+    link.setAttribute('download', `products.csv`);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
 
 }

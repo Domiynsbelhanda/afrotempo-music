@@ -29,6 +29,8 @@ export class HomeComponent implements OnInit {
 
   items: Observable<any>;
 
+  emission: any;
+
   constructor(
       private config: ConfigService,
       private afs: AngularFirestore,
@@ -37,13 +39,24 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
-    this.albums = this.config.albums
     this.genres = this.config.genre;
-    this.images = [
-      {path: '../../../assets/images/afrotempo screenshot.PNG'},
-      {path: '../../../assets/images/afrotempo screenshot.PNG'},
-      {path: '../../../assets/images/afrotempo screenshot.PNG'},
-    ]
+
+    this.afs.collection<any>('album', ref=>ref
+      .orderBy('timestamp', 'desc'))
+      .valueChanges().subscribe((data)=>{
+        this.albums = data.slice(0, 6)
+    });
+    
+
+    this.afs.collection<any>('slider', ref=>ref
+      .orderBy('timestamp', 'desc'))
+      .valueChanges().subscribe((data)=>{
+        this.images = [
+          {path: data[0].image},
+          {path: data[1].image},
+          {path: data[2].image},
+        ]
+    });
 
     this.afs.collection<any>('chanson', ref=>ref
       .orderBy('downloads', 'desc'))
@@ -61,6 +74,12 @@ export class HomeComponent implements OnInit {
       .orderBy('name', 'asc'))
       .valueChanges().subscribe((data)=>{
         this.artists = data.slice(0, 6)
+    });
+
+    this.afs.collection<any>('emission', ref=>ref
+      .orderBy('timestamp', 'desc'))
+      .valueChanges().subscribe((data)=>{
+        this.emission = data.slice(0, 1)
     });
   }
 }
