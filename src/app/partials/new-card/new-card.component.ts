@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-new-card',
@@ -8,10 +9,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NewCardComponent implements OnInit {
 
   @Input() song: any = {};
+
+  loadAPI: Promise<any>;
   
-  constructor() { }
+  constructor(
+    private configService: ConfigService
+  ) { }
 
   ngOnInit(): void {
+    this.loadAPI = new Promise(resolve => {
+      this.configService.loadScripts();
+    });
   }
 
 }

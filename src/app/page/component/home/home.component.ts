@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit {
 
   emissions: string;
 
+  loadApi: Promise<any>;
+
   constructor(
       private config: ConfigService,
       private afs: AngularFirestore,
@@ -40,6 +42,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
     this.genres = this.config.genre;
+
+    this.loadApi = new Promise(resolve => {
+      this.config.loadScripts();
+    });
 
     this.afs.collection<any>('album', ref=>ref
       .orderBy('timestamp', 'desc'))

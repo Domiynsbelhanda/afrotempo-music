@@ -1,23 +1,4 @@
-   
-    <!---Banner--->
-    <div class="ms-banner">
-        <div class="container-fluid">
-                    <carousel
-                        [width]="innerWidth - 200"
-                        [height]="innerWidth / 3"
-                        [cellsToShow]="1"
-                        [cellsToScroll]="1"
-                        [autoplay]="true"
-                        [autoplayInterval]="5000"
-                        [pauseOnHover]="true"
-                        [counter]="true"
-                        [counterSeparator]="' / '"
-                        [images]="images">
-                    </carousel>
-        </div>
-    </div>
-
-    <!---Recently Played Music--->
+       <!---Recently Played Music--->
     <div class="ms_rcnt_slider">
         <div class="ms_heading">
             <h1>Recently Played</h1>
@@ -34,6 +15,30 @@
         <div class="swiper-button-next slider_nav_next"></div>
         <div class="swiper-button-prev slider_nav_prev"></div>
     </div>
+
+        <!---Banner--->
+
+        <br>
+        
+            <div class="ms_rcnt_slider">
+                <div class="container">
+                    <carousel
+                            [width]="innerWidth - 200"
+                            [height]="innerWidth / 3"
+                            [cellsToShow]="1"
+                            [cellsToScroll]="1"
+                            [autoplay]="true"
+                            [autoplayInterval]="5000"
+                            [loop] = "true"
+                            [counter]="true"
+                            [counterSeparator]="' / '"
+                            [transitionDuration] = "300"
+                            [images]="images">
+                        </carousel>
+                </div>
+            </div>
+        
+
     <!---Weekly Top 15--->
     <div class="ms_weekly_wrapper">
         <div class="ms_weekly_inner">
@@ -90,7 +95,7 @@
 
     <div class="ms_fea_album_slider">
         <div class="ms_heading">
-            <h1>Afro Emission</h1>
+            <h1>Afro Video</h1>
             <span class="veiw_all"><a routerLink="/emission">view more</a></span>
         </div>
         <div class="ms_album_slider swiper-container">

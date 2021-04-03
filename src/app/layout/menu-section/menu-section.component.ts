@@ -9,8 +9,8 @@ declare const Menu: any;
 })
 export class MenuSectionComponent implements OnInit {
 
-  logos = './assets/images/logo_rouge.png';
-  logos2 = './assets/images/logo_1.png';
+  logos = './assets/images/logo.png';
+  logos2 = './assets/images/logo.png';
 
   config: any = {
     items: [
@@ -21,7 +21,7 @@ export class MenuSectionComponent implements OnInit {
       },
       {
         title: 'Profil',
-        icon: 'icon icon_data',
+        icon: 'icon icon_station',
         page: '/profil'
       },
       {
@@ -40,8 +40,8 @@ export class MenuSectionComponent implements OnInit {
         page: '/track'
       },
       {
-        title: 'Emission',
-        icon : 'icon icon_folder',
+        title: 'Videos',
+        icon : 'icon icon_tracks',
         page: '/emission'
       }
     ]

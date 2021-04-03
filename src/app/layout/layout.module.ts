@@ -5,10 +5,11 @@ import { PlayerComponent } from './player/player.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
+import { SearchComponent } from './search/search.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -20,16 +21,19 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PlayerComponent,
     BannerComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent
   ],
   exports: [
     MenuSectionComponent,
     PlayerComponent,
     BannerComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent
   ],
   imports: [
+    FormsModule,
     ReactiveFormsModule,
     CommonModule,
     RouterModule,

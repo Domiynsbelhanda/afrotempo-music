@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ClipboardService } from 'ngx-clipboard'
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-primary-card',
@@ -11,12 +12,18 @@ export class PrimaryCardComponentComponent implements OnInit {
 
   @Input() song: any = {};
 
+  loadAPI: Promise<any>;
+
   constructor(
     private afs: AngularFirestore,
-    private _clipboardService: ClipboardService
+    private _clipboardService: ClipboardService,
+    private configService: ConfigService
   ) { }
 
   ngOnInit(): void {
+    this.loadAPI = new Promise(resolve => {
+      this.configService.loadScripts();
+    });
   }
 
   addDownload(noms: string, downloads: number, vue: number, lin: string) {
