@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/services/config.service';
 
 declare const Menu: any;
 
@@ -47,9 +48,15 @@ export class MenuSectionComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  loadApi: Promise<any>;
+
+  constructor(private configs: ConfigService,) { }
 
   ngOnInit(): void {
+
+    this.loadApi = new Promise(resolve => {
+      this.configs.loadScripts();
+    });
     
   }
 

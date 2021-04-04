@@ -90,7 +90,8 @@ const routes: Routes = [
     GenreComponent,
     AlbumsComponent,
     AlbumDetailComponent,
-    EmissionComponent
+    EmissionComponent,
+    
   ],
   imports: [
     IvyCarouselModule,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { catchError, finalize } from 'rxjs/operators';
 import { LoadingService } from 'src/app/services/loading.service';
@@ -25,11 +26,17 @@ export class ProfilComponent implements OnInit {
       private loadingService: LoadingService,
       private localStorage: LocalStorageService,
       private afs: AngularFirestore,
-      private storage: AngularFireStorage
+      private storage: AngularFireStorage,
+      private router: Router,
     ) { }
 
   ngOnInit(): void {
     this.currentUser = this.localStorage.getCurrentUser();
+
+    if(this.currentUser == null){
+      this.router.navigate(['/home']);
+    }
+
     this.update = new FormGroup({
       displayName: new FormControl(this.currentUser.displayName),
       localisation: new FormControl(this.currentUser.localisation),
